@@ -11,7 +11,7 @@
     
   </head>
 <body>
-  <i class="icon-menu burguer-button"></i>
+  <i class="icon-menu burguer-button" id="burger-menu"></i>
     <header class="header">
       <div class="container">
         <figure class="logo">
@@ -49,7 +49,8 @@
             <h6 class="project-course">React Native / React</h6>
             <p class="project-date"><small><strong>Fecha:</strong> 01/07/2018</small> </p>
             <p class="project-url"><small><strong>Puedes verlo en:</strong>www.platzi.com/native</small></p>
-            <p class="project-description">Platzi video fue el resutlado de 3 meses de trabajo para crear la mejor app para enseñar el funcionamiento de React y React native. Desde crear un vista-detalle, hasta patrones avanzados.</p>
+            <p class="project-description">Platzi video fue el resutlado de 3 meses de trabajo para crear la mejor app para enseñar el funcionamiento de React y React native. Desde crear un vista-detalle, hasta patrones avanzados de navegación, 
+              este royecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma.</p>
           </div> 
           <figure class="project-imageContainer">
             <img class="project-image" src="./imagenes/platzi-video-react-native.png" width="500" alt="proyecto del curso react native">  
@@ -151,5 +152,34 @@
         </div>
       </div>      
     </footer>
+    <script>
+      const ipad = window.matchMedia('screen and (max-width: 767px)')
+      const menu = document.querySelector('.menu');
+      /* console.log(menu); */
+      const burgerButton = document.querySelector('#burger-menu');
+      /* console.log(burguerButton);*/
+      
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+          
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+
+      validation(ipad);
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active')
+        } else{
+        menu.classList.add('is-active')
+        
+        }
+      }
+    </script>
 </body>
 </html>
