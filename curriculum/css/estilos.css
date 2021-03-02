@@ -342,6 +342,11 @@ h2 {
 }
 
 @media screen and (max-width: 1024px){
+  .event-list-title {
+    margin-left: 0;
+  }
+  
+  
   .portfolio{
     padding: 0;
   }
@@ -401,6 +406,12 @@ h2 {
   }
 }
 @media screen and (max-width: 767px){
+  h2 {
+    font-size: 1.2em;
+    margin: .5em 0;
+  }
+  
+  
   .burguer-button{
     display: block;
   }
@@ -501,6 +512,13 @@ h2 {
   }
 }
 @media screen and (max-width: 480px){
+  .social-link{
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+  }
+  
+  
   h1 {
     font-size: 1.5em;
   }
